@@ -43,9 +43,19 @@ function App() {
 // writtig an state for my function.
 function Counter() {
   const [count, setCount] = useState(10);
+  const handleIncrease = () => setCount(count + 1);
+  const handleDecrease = () => setCount(count - 1);
+  //const handleIncrease = () =>
+  // {
+  //   const newCount = count + 1;
+  //   setCount(newCount);
+  // };
   return (
     <div>
       <h1>Count:{count} </h1>
+      {/* <button onClick={handleIncrease}> Increase</button> */}
+      <button onMouseMove={() => setCount(count + 1)}> Increase</button>
+      <button onClick={() => setCount(count - 1)}> Decrease</button>
     </div>
   );
 }
