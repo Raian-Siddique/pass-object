@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
   const nayokList = ["JASHIM", "RUBEL", "MANNA", "bappi"];
@@ -41,10 +42,10 @@ function App() {
 }
 // writtig an state for my function.
 function Counter() {
-  const [count, setCount] = useState();
+  const [count, setCount] = useState(10);
   return (
     <div>
-      <h1>Count: 0</h1>
+      <h1>Count:{count} </h1>
     </div>
   );
 }
