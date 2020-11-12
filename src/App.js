@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Counter></Counter>
         <ul>
           {pd.map((product) => (
             <li>{product.name}</li>
@@ -37,6 +39,16 @@ function App() {
     </div>
   );
 }
+// writtig an state for my function.
+function Counter() {
+  const [count, setCount] = useState();
+  return (
+    <div>
+      <h1>Count: 0</h1>
+    </div>
+  );
+}
+
 function Product(props) {
   const pdstyle = {
     border: "1px solid light-salmon",
