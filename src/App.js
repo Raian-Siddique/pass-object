@@ -1,10 +1,10 @@
 // import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const nayokList = ["JASHIM", "RUBEL", "MANNA", "bappi"];
+  const nayokList = ["JASHIM", "RUBEL", "MANNA", "Bappi"];
   const pd = [
     { name: "Photoshop", price: "$90.99" },
     { name: "Illustrator", price: "$50.99" },
@@ -18,6 +18,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Counter></Counter>
+        <Users> </Users>
         <ul>
           {pd.map((product) => (
             <li>{product.name}</li>
@@ -56,6 +57,18 @@ function Counter() {
       {/* <button onClick={handleIncrease}> Increase</button> */}
       <button onMouseMove={() => setCount(count + 1)}> Increase</button>
       <button onClick={() => setCount(count - 1)}> Decrease</button>
+    </div>
+  );
+}
+
+function Users() {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    console.log("calling effect");
+  });
+  return (
+    <div>
+      <h3>Dynamic Users</h3>
     </div>
   );
 }
